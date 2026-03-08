@@ -1,0 +1,801 @@
+
+
+Docs:       https://termux.dev/docs
+Donate:     https://termux.dev/donate
+Community:  https://termux.dev/community
+
+Working with packages:
+
+ - Search:  pkg search <query>
+ - Install: pkg install <package>
+ - Upgrade: pkg upgrade
+
+Subscribing to additional repositories:
+
+ - Root:    pkg install root-repo
+ - X11:     pkg install x11-repo
+
+For fixing any repository issues,
+try 'termux-change-repo' command.
+
+Report issues at https://termux.dev/issues
+~ $ pkg install nano
+No mirror or mirror group selected. You might want to select one by running 'termux-change-repo'
+Checking availability of current mirror:
+[*] https://plug-mirror.rcac.purdue.edu/termux/termux-main: ok
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+nano is already the newest version (8.7.1).
+0 upgraded, 0 newly installed, 0 to remove and 72 not upgraded.
+~ $ cd ~
+~ $ nano MainActivity.kt
+~ $ nano MainScreen.kt
+~ $ nano Utils.ktls
+~ $ nano MainActivity.kt
+~ $ nano MainScreen.kt
+~ $ package com.alisha.codeplatform
+No command package found, did you mean:
+ Command pvchange in package lvm2 from the root-repo repository
+ Command pamedge in package netpbm
+ Command packf in package nmh
+ Command pacman in package pacman
+ Command pacat in package pulseaudio
+ Command page in package tcllib
+~ $
+~ $ import androidx.compose.foundation.background
+The program import is not installed. Install it by executing:
+ pkg install imagemagick
+~ $ import
+The program import is not installed. Install it by executing:
+ pkg install imagemagick
+~ $ nano MainScreen.kt
+~ $ package com.alisha.codeplatform
+coroutines.launch
+
+@Composable
+fun MainScreen() {
+    val context = LocalContext.current
+    val coroutineScope = rememberCoroutineScope()
+    val focusRequester = remember { FocusRequester() }
+    var text by remember { mutableStateOf(TextFieldValue("")) }
+    var isFocused by remember { mutableStateOf(false) }
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color(0xFF0D1117))
+            .padding(16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+    ) {
+        Text(
+            text = "Code Platform",
+            style = TextStyle(
+                color = Color.White,
+                fontSize = 32.sp,
+                fontFamily = FontFamily.SansSerif
+            )
+        )
+
+        Spacer(modifier = Modifier.height(32.dp))
+
+        BasicTextField(
+            value = text,
+            onValueChange = { text = it },
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(200.dp)
+                .background(Color(0xFF1E1E1E), RoundedCornerShape(8.dp))
+                .padding(12.dp)
+                .focusRequester(focusRequester)
+                .onFocusChanged { isFocused = it.isFocused }
+                .pointerInput(Unit) {
+                    detectDragGestures { change, _ ->
+                        change.consume()
+                    }
+                },
+            textStyle = TextStyle(
+                color = Color(0xFFE0E0E0),
+                fontSize = 16.sp,
+                fontFamily = FontFamily.Monospace
+            ),
+            cursorBrush = SolidColor(Color.Cyan),
+            singleLine = false
+        )
+
+        Spacer(modifier = Modifier.height(24.dp))
+
+        Button(
+            onClick = {
+                coroutineScope.launch {
+                    Toast.makeText(context, "Code saved!", Toast.LENGTH_SHORT).show()
+                }
+            },
+            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF00BFA5)),
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(56.dp)
+        ) {
+            Icon(Icons.Default.Edit, contentDescription = null)
+            Spacer(Modifier.width(8.dp))
+            Text("Save & Run")
+        }
+    }
+}No command package found, did you mean:
+ Command pvchange in package lvm2 from the root-repo repository
+ Command pamedge in package netpbm
+ Command packf in package nmh
+ Command pacman in package pacman
+ Command pacat in package pulseaudio
+ Command page in package tcllib
+~ $
+~ $ import androidx.compose.foundation.background
+The program import is not installed. Install it by executing:
+ pkg install imagemagick
+~ $ import androidx.compose.foundation.layout.*
+The program import is not installed. Install it by executing:
+ pkg install imagemagick
+~ $ import androidx.compose.foundation.shape.RoundedCornerShape
+The program import is not installed. Install it by executing:
+ pkg install imagemagick
+~ $ import androidx.compose.foundation.text.BasicTextField
+The program import is not installed. Install it by executing:
+ pkg install imagemagick
+~ $ import androidx.compose.material3.*
+The program import is not installed. Install it by executing:
+ pkg install imagemagick
+~ $ import androidx.compose.runtime.*
+The program import is not installed. Install it by executing:
+ pkg install imagemagick
+~ $ import androidx.compose.ui.Alignment
+The program import is not installed. Install it by executing:
+ pkg install imagemagick
+~ $ import androidx.compose.ui.Modifier
+The program import is not installed. Install it by executing:
+ pkg install imagemagick
+~ $ import androidx.compose.ui.graphics.Color
+The program import is not installed. Install it by executing:
+ pkg install imagemagick
+~ $ import androidx.compose.ui.platform.LocalContext
+The program import is not installed. Install it by executing:
+ pkg install imagemagick
+~ $ import androidx.compose.ui.text.TextStyle
+The program import is not installed. Install it by executing:
+ pkg install imagemagick
+~ $ import androidx.compose.ui.text.font.FontFamily
+The program import is not installed. Install it by executing:
+ pkg install imagemagick
+~ $ import androidx.compose.ui.unit.dp
+The program import is not installed. Install it by executing:
+ pkg install imagemagick
+~ $ import androidx.compose.ui.unit.sp
+The program import is not installed. Install it by executing:
+ pkg install imagemagick
+~ $ import android.widget.Toast
+The program import is not installed. Install it by executing:
+ pkg install imagemagick
+~ $ import androidx.activity.result.contract.ActivityResultContracts
+The program import is not installed. Install it by executing:
+ pkg install imagemagick
+~ $ import android.net.Uri
+The program import is not installed. Install it by executing:
+ pkg install imagemagick
+~ $ import androidx.compose.material.icons.Icons
+The program import is not installed. Install it by executing:
+ pkg install imagemagick
+~ $ import androidx.compose.material.icons.filled.Edit
+The program import is not installed. Install it by executing:
+ pkg install imagemagick
+~ $ import androidx.compose.ui.input.pointer.pointerInput
+The program import is not installed. Install it by executing:
+ pkg install imagemagick
+~ $ import androidx.compose.ui.graphics.SolidColor
+The program import is not installed. Install it by executing:
+ pkg install imagemagick
+~ $ import androidx.compose.ui.focus.FocusRequester
+The program import is not installed. Install it by executing:
+ pkg install imagemagick
+~ $ import androidx.compose.ui.focus.focusRequester
+The program import is not installed. Install it by executing:
+ pkg install imagemagick
+~ $ import androidx.compose.ui.focus.onFocusChanged
+The program import is not installed. Install it by executing:
+ pkg install imagemagick
+~ $ import androidx.compose.ui.text.input.TextFieldValue
+The program import is not installed. Install it by executing:
+ pkg install imagemagick
+~ $ import kotlinx.coroutines.launch
+The program import is not installed. Install it by executing:
+ pkg install imagemagick
+~ $
+~ $ @Composable
+@Composable: command not found
+~ $ fun MainScreen() {
+bash: syntax error near unexpected token `('
+~ $     val context = LocalContext.current
+No command val found, did you mean:
+ Command al in package mono
+ Command cal in package util-linux
+ Command vala in package valac
+ Command vale in package vale
+~ $     val coroutineScope = rememberCoroutineScope()bash: syntax error near unexpected token `('
+~ $     val focusRequester = remember { FocusRequester() }
+bash: syntax error near unexpected token `('
+~ $     var text by remember { mutableStateOf(TextFieldValue("")) }
+bash: syntax error near unexpected token `('
+~ $     var isFocused by remember { mutableStateOf(false) }
+bash: syntax error near unexpected token `('
+~ $
+~ $     Column(
+bash: syntax error near unexpected token `newline'
+~ $         modifier = Modifier
+modifier: command not found
+~ $             .fillMaxSize()
+>             .background(Color(0xFF0D1117))
+bash: syntax error near unexpected token `.background'
+~ $             .padding(16.dp),
+bash: syntax error near unexpected token `16.dp'
+~ $         horizontalAlignment = Alignment.CenterHorizontally,
+horizontalAlignment: command not found
+~ $         verticalArrangement = Arrangement.Center
+verticalArrangement: command not found
+~ $     ) {
+bash: syntax error near unexpected token `)'
+~ $         Text(
+bash: syntax error near unexpected token `newline'
+~ $             text = "Code Platform",
+No command text found, did you mean:
+ Command test in package coreutils
+ Command next in package mailutils
+ Command next in package nmh
+ Command tex in package texlive-bin
+~ $             style = TextStyle(
+bash: syntax error near unexpected token `('
+~ $                 color = Color.White,
+No command color found, did you mean:
+ Command col1 in package byobu
+ Command codon in package codon
+ Command colm in package colm
+ Command cook in package cookcli
+ Command colorit in package dictd
+ Command gvcolor in package graphviz
+ Command col in package util-linux
+~ $                 fontSize = 32.sp,
+No command fontSize found, did you mean:
+ Command fontlint in package fontforge-gtk from the x11-repo repository
+~ $                 fontFamily = FontFamily.SansSeriffontFamily: command not found
+~ $             )
+bash: syntax error near unexpected token `)'
+~ $         )
+bash: syntax error near unexpected token `)'
+~ $
+~ $         Spacer(modifier = Modifier.height(32.dp))bash: syntax error near unexpected token `modifier'
+~ $
+~ $         BasicTextField(
+bash: syntax error near unexpected token `newline'
+~ $             value = text,
+No command value found, did you mean:
+ Command vale in package vale
+~ $             onValueChange = { text = it },
+onValueChange: command not found
+~ $             modifier = Modifier
+modifier: command not found
+~ $                 .fillMaxWidth()
+>                 .height(200.dp)
+bash: syntax error near unexpected token `.height'
+~ $                 .background(Color(0xFF1E1E1E), RoundedCornerShape(8.dp))
+bash: syntax error near unexpected token `Color'
+~ $                 .padding(12.dp)
+bash: syntax error near unexpected token `12.dp'
+~ $                 .focusRequester(focusRequester)
+bash: syntax error near unexpected token `focusRequester'
+~ $                 .onFocusChanged { isFocused = it.isFocused }
+.onFocusChanged: command not found
+~ $                 .pointerInput(Unit) {
+bash: syntax error near unexpected token `Unit'
+~ $                     detectDragGestures { change, _ ->
+bash: syntax error near unexpected token `newline'
+~ $                         change.consume()
+>                     }
+bash: syntax error near unexpected token `}'
+~ $                 },
+No command }, found, did you mean:
+ Command ab in package apache2
+ Command at in package at
+ Command bc in package bc
+ Command ar in package binutils
+ Command as in package binutils-bin
+ Command ar in package binutils-is-llvm
+ Command bk in package bk
+ Command c in package c-script
+ Command cc in package clang
+ Command [ in package coreutils
+ Command lp in package cups
+ Command d8 in package d8
+ Command sh in package dash
+ Command dx in package dx
+ Command ed in package ed
+ Command ef in package electric-fence
+ Command et in package et
+ Command fd in package fd
+ Command fm in package fm
+ Command fx in package fx
+ Command dl in package gatling
+ Command gh in package gh
+ Command gs in package ghostscript
+ Command gn in package gn
+ Command go in package golang
+ Command gm in package graphicsmagick
+ Command gc in package graphviz
+ Command gw in package gw from the x11-repo repository
+ Command hx in package helix
+ Command hr in package hr
+ Command hh in package hstr
+ Command hz in package hz
+ Command i3 in package i3 from the x11-repo repository
+ Command i3 in package i3-gaps from the x11-repo repository
+ Command ip in package iproute2
+ Command iw in package iw from the root-repo repository
+ Command jo in package jo
+ Command jq in package jq
+ Command k in package kona
+ Command lf in package lf
+ Command pl in package libgnustep-base
+ Command h3 in package libuber-h3
+ Command lr in package lr
+ Command m4 in package m4
+ Command mc in package mc
+ Command ml in package mercury
+ Command mg in package mg
+ Command al in package mono
+ Command ts in package moreutils
+ Command lz in package mtools
+ Command mu in package mu
+ Command mr in package myrepos
+ Command sc in package n-t-roff-sc
+ Command ne in package ne
+ Command nc in package netcat-openbsd
+ Command pp in package nss-utils
+ Command nu in package nushell
+ Command nx in package nxengine from the x11-repo repository
+ Command o in package o-editor
+ Command ol in package ol
+ Command 7z in package p7zip
+ Command gp in package pari
+ Command pb in package pb
+ Command ps in package procps
+ Command pd in package proot-distro
+ Command pv in package pv
+ Command q in package q-dns-client
+ Command r2 in package radare2
+ Command rc in package rc
+ Command ci in package rcs
+ Command rc in package rcshell
+ Command rg in package ripgrep
+ Command rq in package rq
+ Command ri in package ruby-ri
+ Command sv in package runit
+ Command rw in package rw
+ Command sd in package sd
+ Command ag in package silversearcher-ag
+ Command sl in package sl
+ Command st in package st from the x11-repo repository
+ Command sr in package surfraw
+ Command ts in package task-spooler
+ Command pt in package tcllib
+ Command am in package termux-am
+ Command df in package termux-tools
+ Command ht in package texlive-bin
+ Command sn in package tin-summer
+ Command tf in package tinyfugue
+ Command ug in package ugrep
+ Command up in package up
+ Command ul in package util-linux
+ Command cu in package uucp
+ Command uv in package uv
+ Command ex in package vim-gtk from the x11-repo repository
+ Command vt in package virustotal-cli
+ Command wg in package wireguard-tools
+ Command xh in package xh
+ Command X in package xorg-server from the x11-repo repository
+ Command xz in package xz-utils
+ Command ya in package yazi
+ Command yq in package yq
+ Command z3 in package z3
+ Command zk in package zk
+~ $             textStyle = TextStyle(
+bash: syntax error near unexpected token `('
+~ $                 color = Color(0xFFE0E0E0),
+bash: syntax error near unexpected token `('
+~ $                 fontSize = 16.sp,
+No command fontSize found, did you mean:
+ Command fontlint in package fontforge-gtk from the x11-repo repository
+~ $                 fontFamily = FontFamily.MonospacefontFamily: command not found
+~ $             ),
+bash: syntax error near unexpected token `)'
+~ $             cursorBrush = SolidColor(Color.Cyan),bash: syntax error near unexpected token `('
+~ $             singleLine = false
+singleLine: command not found
+~ $         )
+bash: syntax error near unexpected token `)'
+~ $
+~ $         Spacer(modifier = Modifier.height(24.dp))bash: syntax error near unexpected token `modifier'
+~ $
+~ $         Button(
+bash: syntax error near unexpected token `newline'
+~ $             onClick = {
+No command onClick found, did you mean:
+ Command unlink in package coreutils
+ Command conflict in package nss-utils
+~ $                 coroutineScope.launch {
+coroutineScope.launch: command not found
+~ $                     Toast.makeText(context, "Code saved!", Toast.LENGTH_SHORT).show()
+bash: syntax error near unexpected token `context,'
+~ $                 }
+bash: syntax error near unexpected token `}'
+~ $             },
+No command }, found, did you mean:
+ Command ab in package apache2
+ Command at in package at
+ Command bc in package bc
+ Command ar in package binutils
+ Command as in package binutils-bin
+ Command ar in package binutils-is-llvm
+ Command bk in package bk
+ Command c in package c-script
+ Command cc in package clang
+ Command [ in package coreutils
+ Command lp in package cups
+ Command d8 in package d8
+ Command sh in package dash
+ Command dx in package dx
+ Command ed in package ed
+ Command ef in package electric-fence
+ Command et in package et
+ Command fd in package fd
+ Command fm in package fm
+ Command fx in package fx
+ Command dl in package gatling
+ Command gh in package gh
+ Command gs in package ghostscript
+ Command gn in package gn
+ Command go in package golang
+ Command gm in package graphicsmagick
+ Command gc in package graphviz
+ Command gw in package gw from the x11-repo repository
+ Command hx in package helix
+ Command hr in package hr
+ Command hh in package hstr
+ Command hz in package hz
+ Command i3 in package i3 from the x11-repo repository
+ Command i3 in package i3-gaps from the x11-repo repository
+ Command ip in package iproute2
+ Command iw in package iw from the root-repo repository
+ Command jo in package jo
+ Command jq in package jq
+ Command k in package kona
+ Command lf in package lf
+ Command pl in package libgnustep-base
+ Command h3 in package libuber-h3
+ Command lr in package lr
+ Command m4 in package m4
+ Command mc in package mc
+ Command ml in package mercury
+ Command mg in package mg
+ Command al in package mono
+ Command ts in package moreutils
+ Command lz in package mtools
+ Command mu in package mu
+ Command mr in package myrepos
+ Command sc in package n-t-roff-sc
+ Command ne in package ne
+ Command nc in package netcat-openbsd
+ Command pp in package nss-utils
+ Command nu in package nushell
+ Command nx in package nxengine from the x11-repo repository
+ Command o in package o-editor
+ Command ol in package ol
+ Command 7z in package p7zip
+ Command gp in package pari
+ Command pb in package pb
+ Command ps in package procps
+ Command pd in package proot-distro
+ Command pv in package pv
+ Command q in package q-dns-client
+ Command r2 in package radare2
+ Command rc in package rc
+ Command ci in package rcs
+ Command rc in package rcshell
+ Command rg in package ripgrep
+ Command rq in package rq
+ Command ri in package ruby-ri
+ Command sv in package runit
+ Command rw in package rw
+ Command sd in package sd
+ Command ag in package silversearcher-ag
+ Command sl in package sl
+ Command st in package st from the x11-repo repository
+ Command sr in package surfraw
+ Command ts in package task-spooler
+ Command pt in package tcllib
+ Command am in package termux-am
+ Command df in package termux-tools
+ Command ht in package texlive-bin
+ Command sn in package tin-summer
+ Command tf in package tinyfugue
+ Command ug in package ugrep
+ Command up in package up
+ Command ul in package util-linux
+ Command cu in package uucp
+ Command uv in package uv
+ Command ex in package vim-gtk from the x11-repo repository
+ Command vt in package virustotal-cli
+ Command wg in package wireguard-tools
+ Command xh in package xh
+ Command X in package xorg-server from the x11-repo repository
+ Command xz in package xz-utils
+ Command ya in package yazi
+ Command yq in package yq
+ Command z3 in package z3
+ Command zk in package zk
+~ $             colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF00BFA5)),
+bash: syntax error near unexpected token `('
+~ $             modifier = Modifier
+modifier: command not found
+~ $                 .fillMaxWidth()
+>                 .height(56.dp)
+bash: syntax error near unexpected token `.height'
+~ $         ) {
+bash: syntax error near unexpected token `)'
+~ $             Icon(Icons.Default.Edit, contentDescription = null)
+bash: syntax error near unexpected token `Icons.Default.Edit,'
+~ $             Spacer(Modifier.width(8.dp))
+bash: syntax error near unexpected token `Modifier.width'
+~ $             Text("Save & Run")
+bash: syntax error near unexpected token `"Save & Run"'
+~ $         }
+bash: syntax error near unexpected token `}'
+~ $     }
+bash: syntax error near unexpected token `}'
+~ $ }
+bash: syntax error near unexpected token `}'
+~ $ nano Utils.kt
+~ $ package com.alisha.codeplatform
+No command package found, did you mean:
+ Command pvchange in package lvm2 from the root-repo repository
+ Command pamedge in package netpbm
+ Command packf in package nmh
+ Command pacman in package pacman
+ Command pacat in package pulseaudio
+ Command page in package tcllib
+~ $
+~ $ import android.content.ContentResolver
+The program import is not installed. Install it by executing:
+ pkg install imagemagick
+~ $ import android.net.Uri
+The program import is not installed. Install it by executing:
+ pkg install imagemagick
+~ $ import android.provider.OpenableColumns
+The program import is not installed. Install it by executing:
+ pkg install imagemagick
+~ $
+~ $ fun ContentResolver.getFileName(uri: Uri): String? {
+bash: syntax error near unexpected token `('
+~ $     var name: String? = null
+No command var found, did you mean:
+ Command ar in package binutils
+ Command ar in package binutils-is-llvm
+ Command dar in package dar
+ Command tar in package tar
+~ $     query(uri, null, null, null, null)?.use { cursor ->
+bash: syntax error near unexpected token `uri,'
+~ $         val nameIndex = cursor.getColumnIndex(OpenableColumns.DISPLAY_NAME)
+bash: syntax error near unexpected token `('
+~ $         if (cursor.moveToFirst() && nameIndex >= 0) {
+bash: syntax error near unexpected token `&&'
+~ $             name = cursor.getString(nameIndex)
+bash: syntax error near unexpected token `('
+~ $         }
+bash: syntax error near unexpected token `}'
+~ $     }
+bash: syntax error near unexpected token `}'
+~ $     return name
+bash: return: name: numeric argument required
+bash: return: can only `return' from a function or sourced script
+~ $ }
+bash: syntax error near unexpected token `}'
+~ $
+~ $ fun detectLanguageFromExtension(fileName: String): String? {
+bash: syntax error near unexpected token `('
+~ $     return when (fileName.substringAfterLast(".").lowercase()) {
+bash: syntax error near unexpected token `('
+~ $         "py" -> "Python"
+No command py found, did you mean:
+ Command pr in package coreutils
+ Command pl in package libgnustep-base
+ Command pp in package nss-utils
+ Command pb in package pb
+ Command ps in package procps
+ Command pd in package proot-distro
+ Command pv in package pv
+ Command pt in package tcllib
+ Command pm in package termux-tools
+~ $         "java" -> "Java"
+No command java found, did you mean:
+ Command cava in package cava
+~ $         "kt", "kts" -> "Kotlin"
+No command kt, found, did you mean:
+ Command at in package at
+ Command atc in package bsd-games
+ Command ctr in package containerd from the root-repo repository
+ Command ptx in package coreutils
+ Command dtc in package dtc
+ Command dte in package dte
+ Command et in package et
+ Command ftp in package inetutils
+ Command tc in package iproute2
+ Command k9s in package k9s
+ Command kak in package kakoune
+ Command k in package kona
+ Command ksu in package krb5
+ Command ksh in package loksh
+ Command mtc in package mercury
+ Command ts in package moreutils
+ Command mtr in package mtr from the root-repo repository
+ Command st in package st from the x11-repo repository
+ Command ts in package task-spooler
+ Command pt in package tcllib
+ Command ht in package texlive-bin
+ Command tf in package tinyfugue
+ Command vt in package virustotal-cli
+ Command vtm in package vtm
+~ $         "js", "jsx" -> "JavaScript"
+No command js, found, did you mean:
+ Command asy in package asymptote
+ Command bsh in package beanshell
+ Command as in package binutils-bin
+ Command ls in package coreutils
+ Command csh in package csh
+ Command sh in package dash
+ Command ssh in package dropbear
+ Command tsh in package etsh
+ Command gs in package ghostscript
+ Command gsf in package gsf-tools
+ Command ss in package iproute2
+ Command ns6 in package ipv6toolkit
+ Command jo in package jo
+ Command joe in package joe
+ Command jq in package jq
+ Command jql in package jql
+ Command joe in package jupp
+ Command just in package just
+ Command jwm in package jwm from the x11-repo repository
+ Command ksu in package krb5
+ Command psl in package libpsl
+ Command ksh in package loksh
+ Command lsb in package lrzsz
+ Command lsd in package lsd
+ Command csc in package mono
+ Command ts in package moreutils
+ Command psc in package n-t-roff-sc
+ Command ssh in package openssh
+ Command ps in package procps
+ Command qjs in package quickjs
+ Command sv in package runit
+ Command sd in package sd
+ Command sl in package sl
+ Command jls in package sleuthkit
+ Command gst in package smalltalk
+ Command st in package st from the x11-repo repository
+ Command sr in package surfraw
+ Command ts in package task-spooler
+ Command tsh in package teleport-tsh
+ Command su in package termux-tools
+ Command sn in package tin-summer
+ Command tsz in package trzsz-go
+ Command tsp in package tsduck-tools
+ Command tsu in package tsu
+ Command tjs in package txikijs
+ Command zsh in package zsh
+~ $         "ts", "tsx" -> "TypeScript"
+No command ts, found, did you mean:
+ Command tsh in package etsh
+ Command ts in package moreutils
+ Command ts in package task-spooler
+ Command tsh in package teleport-tsh
+ Command tsz in package trzsz-go
+ Command tsp in package tsduck-tools
+ Command tsu in package tsu
+~ $         "cpp", "cc", "cxx" -> "C++"
+No command cpp, found, did you mean:
+ Command cpp in package clang
+ Command cppi in package cppi
+~ $         "c" -> "C"
+The program c is not installed. Install it by executing:
+ pkg install c-script
+~ $         "gradle" -> "Gradle"
+The program gradle is not installed. Install it by executing:
+ pkg install gradle
+~ $         "json" -> "JSON"
+No command json found, did you mean:
+ Command bison in package bison
+ Command bmon in package bmon
+ Command join in package coreutils
+ Command csol in package csol
+ Command fsmon in package fsmon
+ Command gron in package gron
+ Command jo in package jo
+ Command joe in package joe
+ Command joe in package jupp
+ Command lsof in package lsof
+ Command sn in package mono
+ Command nmon in package nmon
+ Command sox in package sox
+ Command svn in package subversion
+ Command sun in package sun
+ Command sn in package tin-summer
+~ $         "yaml", "yml" -> "YAML"
+No command yaml, found, did you mean:
+ Command amr in package acr
+ Command ambr in package amber
+ Command als in package atool
+ Command babl in package babl
+ Command sample in package barcode
+ Command yacc in package bison
+ Command sail in package bsd-games
+ Command yacc in package byacc
+ Command calc in package calc
+ Command tail in package coreutils
+ Command named in package dnsutils
+ Command lame in package lame
+ Command yat2m in package libgpg-error
+ Command ali in package mailutils
+ Command ml in package mercury
+ Command gamma in package mesa-demos from the x11-repo repository
+ Command mlr in package miller
+ Command al in package mono
+ Command nala in package nala
+ Command nali in package nali
+ Command pamx in package netpbm
+ Command ali in package nmh
+ Command pamon in package pulseaudio
+ Command qalc in package qalc
+ Command qml in package qt5-qtdeclarative from the x11-repo repository
+ Command qml6 in package qt6-qtdeclarative from the x11-repo repository
+ Command samu in package samurai
+ Command mmls in package sleuthkit
+ Command taplo in package taplo
+ Command am in package termux-am
+ Command cal in package util-linux
+ Command vala in package valac
+ Command vale in package vale
+ Command walk in package walk
+ Command xml in package xmlstarlet
+ Command yadm in package yadm
+ Command yara in package yara
+ Command yarn in package yarn
+ Command yasm in package yasm
+ Command ya in package yazi
+~ $         else -> null
+bash: syntax error near unexpected token `else'
+~ $     }
+bash: syntax error near unexpected token `}'
+~ $ }
+bash: syntax error near unexpected token `}'
+~ $
+~ $
+~ $ ls
+C       JavaScript        Python
+C++     Kotlin            TypeScript
+Gradle  MainActivity.kt   Utils.kt
+JSON    MainActivity.ktx  Utils.ktls
+Java    MainScreen.kt     YAML
+~ $ nano Utils.kt
+~ $ ls
+C       JavaScript        Python
+C++     Kotlin            TypeScript
+Gradle  MainActivity.kt   Utils.kt
+JSON    MainActivity.ktx  Utils.ktls
+Java    MainScreen.kt     YAML
+~ $
